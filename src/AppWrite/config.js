@@ -97,6 +97,10 @@ export class Service {
       return false;
     }
   }
+
+  async getFilePreview(fileId) {
+    return this.bucket.getFilePreview(Conf.bucketID, fileId);
+  }
 }
 
 const service = new Service();
